@@ -2,10 +2,9 @@ html {
 	height: 100%;
 }
 
-.todo-wrapper {
-    justify-content: center;
-    margin-top: 3rem;
-    min-width: 600px;
+
+.todo-list {
+    margin: 5px 0;
 }
 
 .todo-input-box {
@@ -20,9 +19,32 @@ html {
     align-items: center;
 }
 
+.todo-plus {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 3rem;
+    border-radius: 12px;
+    border: solid 1px #e4e4e4;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 16px; */
+}
+
 button {
     background-color: transparent;
     border: 0;
+}
+
+.plus {
+    color: #58b1fa;
+    height: 100%;
+    width: 100%;
+}
+
+.plus img {
+    width: 48px;
 }
 
 /* .todo-input-box img {
@@ -67,7 +89,7 @@ button {
     border-radius: 12px;
     border: solid 1px #e4e4e4;
     background-color: #fff;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .todo-timeimg {
