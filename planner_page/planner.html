@@ -30,7 +30,7 @@
         </ul>
         <div class="link"><a href="#download"><img src="../img/main_page/download.png" alt="DOWNLOAD"></a></div>
       </header>
-      <main class="content">
+      <main id="content">
         <div class="title">
           <div id="text">여행 플래너</div>
           <div id="show"><img src="../img/planner_page/2.png"></div>
@@ -41,7 +41,7 @@
               <img src= "../img/planner_page/calendar.png" onclick="click.daterangepicker">
           </div>
         </div>
-
+        <ul id="list"></ul>
         <div class="background">
             <div class="popup"><a id="close"><img src="../img/planner_page/overlay.png"></a></div>
         </div>
@@ -63,7 +63,11 @@
       </main>
     </div>
         
-    <script type="text/javascript" src="daterangepicker.js"></script>
+    <script type="text/javascript" src="daterangepicker.js">
+    // $(function() {
+    //   $( "#datepicker" ).datepicker({ minDate: 0});
+    //   });
+    </script>
     <script src="popup.js"></script>
     <script src="todolist.js" ></script>
     <script type="text/javascript">
