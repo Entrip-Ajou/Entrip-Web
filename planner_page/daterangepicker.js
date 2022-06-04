@@ -383,6 +383,13 @@
                 'keyup.daterangepicker': $.proxy(this.elementChanged, this),
                 'keydown.daterangepicker': $.proxy(this.keydown, this) //IE 11 compatibility
             });
+
+//               if (typeof abc !== 'string')
+//    abc =
+//             '<div class="list">' +
+//                 '<div class="dates"></div>'
+//             '</div>';
+//             $('#content').append(abc);
         } else {
             this.element.on('click.daterangepicker', $.proxy(this.toggle, this));
             this.element.on('keydown.daterangepicker', $.proxy(this.toggle, this));
@@ -437,12 +444,37 @@
             this.updateMonthsInView();
             this.btms = this.endDate-this.startDate;
             this.btday = this.btms/(1000*60*60*24);
-            console.log(this.btday + 1 + '일');
+            // console.log(this.btday + 1 + '일');
             for(i = 0; i < this.btday + 1; i++){
-                console.log(this.startDate.format(this.locale.format) + ' +' + i +'일');
-                
+                $("#list").append("<li class='date'></div>");
             }
-          
+            $(".date").append("<a href='#index=i' class='name'></a>");
+            $(".name").append(this.startDate.format('MM/DD'));
+            dateList(this.startDate, this.endDate);
+        function dateList(startDate, endDate){
+    
+    
+          // 두 날짜 차이 계산 실시
+
+    
+          // 정규식 사용해 두 날짜 사이에 포함되는 리스트 출력 실시
+          var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);	
+          var result = [];	
+          const abcd = this.startDate.format('MM/DD');
+          var curDate = new Date(abcd);
+          console.log(curDate);
+    
+          while(curDate <= new Date(this.endDate)) {
+            var date = curDate.toISOString().split("T")[0];    			
+            result.push(date);
+            curDate.setDate(curDate.getDate() + 1);
+            console.log("[dateList] : [date] : " + date);
+          }	
+        };
+
+            $(".container").click(function() {
+                $("#list").html(""); // 태그 초기화
+            });
         },
 
         isInvalidDate: function() {
@@ -731,6 +763,7 @@
 
             if (this.singleDatePicker || (this.endDate && (this.startDate.isBefore(this.endDate) || this.startDate.isSame(this.endDate)))) {
                 this.container.find('button.applyBtn').prop('disabled', false);
+                console.log(this.btday + 1 + '일');
             } else {
                 this.container.find('button.applyBtn').prop('disabled', true);
             }

@@ -11,26 +11,58 @@ element.style {
 
 #planner{
     background-size: auto;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
-#planner img{
+.p1, .c1 {
+    list-style: none;
+}
+
+.p2 {
     background-position: center;
-    width: 962px;
-    height: 535px;
-    margin: 220px 30px;
+    width: 435px;
+    height: 360px;
+    margin: 220px 45px;
 }
 
-#recommand img {
-    width: 981px;
-    height: 755px;
-    margin: 110px 30px;
+.p3 {
+    background-position: center;
+    width: 400px;
+    height: 296px;
+    margin: 280px 25px;
 }
 
-#community img {
-    width: 980px;
-    height: 798px;
-    margin: 90px 30px;
+#recommand {
+    max-width: fill-available;
+}
+
+.r1 {
+    list-style: none;
+    background-image: url(../img/main_page/recommand_1.png);
+    background-repeat: no-repeat;
+    background-size: 980px;
+    width: 100%;
+    margin: 19% 0;
+}
+
+.r2 {
+    width: 230px;
+    height: 125px;
+    margin: 380px 0 0 500px;
+}
+
+.c2 {
+    background-position: center;
+    width: 638px;
+    height: 180px;
+    margin: 110px 171px 50px;
+}
+
+.c3 {
+    background-position: center;
+    width: 750px;
+    height: 490px;
+    margin: 0 115px;
 }
 
 /* .wrapper.style2 {

@@ -48,8 +48,32 @@
       </div>
       </main>
     </div>
+
+    <a href="#pop_info_1" class="btn_open">팝업 열기</a>
+<a href="#pop_info_2" class="btn_open">팝업 열기2</a>
+
+<!-- 팝업1 -->
+<div id="pop_info_1" class="pop_wrap" style="display:none;">
+  <div class="pop_inner">
+    <p class="dsc">팝업 안내문구 입니다.</p>
+    <button type="button" class="btn_close">닫기</button>
+  </div>
+</div>
     <!-- <script src="<c:url value="/resourc/es/js/jquery-2.1.4.min.js"/>"></script>  -->
     <script type="text/javascript" src="search.js"></script>
     <script type="text/javascript" src="popup.js"></script>
+
+    <script>
+      var target = document.querySelectorAll('.btn_open');
+      var targetID;  // 버튼 클릭시 버튼에 해당하는 팝업의 id값 담는 변수
+    
+      // 팝업 열기
+      for(var i = 0; i < target.length; i++){
+        target[i].addEventListener('click', function(){
+          targetID = this.getAttribute('href');
+          document.querySelector(targetID).style.display = 'block';
+        });
+      }
+    </script>
   </body>
 </html>
