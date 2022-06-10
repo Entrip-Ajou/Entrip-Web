@@ -1,4 +1,7 @@
 @import 'font.css';
+body {
+    overflow: hidden;
+}
 
 .start,.question, .result {
     display: flex;
@@ -10,8 +13,8 @@
 
 .background {
     width: 980px;
-    height: 944px;
-    margin: 90px 0 20px;
+    height: 850px;
+    margin: 100px 0 20px;
 }
 
 .textbox {
@@ -22,6 +25,7 @@
     margin: 0 auto;
     height: 100vh;
     width: 100%;
+    top: 100px;
 }
 
 .textstart {
@@ -75,6 +79,7 @@ article {
     margin: 0 auto;
     height: 100vh;
     width: 100%;
+    top: 100px;
 
     font-family: 'GangwonEduAll';
     font-size: 30px;
@@ -123,15 +128,7 @@ article {
     width: 550px;
     margin: 20px auto;
 }
-#city, #explain {
-    font-size: 25px;
-    width: fit-content;
-    margin: 0 auto;
-    font-family: 'GangwonEduAll';
-    letter-spacing: 0.96px;
-    text-align: center;
-    color: #5c5c5c;    
-}
+
 
 @media screen and (max-width : 980px){
     .background {
@@ -172,9 +169,9 @@ article {
 
 @media screen and (max-width : 576px){
     .background {
-        height: 100%;
-        width: 100%;
-        margin: 0;
+        height: 90%;
+        width: 88%;
+        margin: auto;
     }
 
     #title {
