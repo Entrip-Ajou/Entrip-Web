@@ -136,6 +136,10 @@ article {
         margin: 20px auto 20px;
     }
 
+    .textstart {
+        margin: 150px auto 0;
+    }
+
     #title {
         font-size: 28px;
         margin: 240px 121px 0;
@@ -157,6 +161,10 @@ article {
         border-radius: 25px;
     }
 
+    .textstart {
+        margin: 200px auto 0;
+    }
+
     #title {
         font-size: 26px;
         margin: 240px 97px 0;
@@ -172,6 +180,10 @@ article {
         height: 90%;
         width: 88%;
         margin: auto;
+    }
+
+    .textstart {
+        margin: 100px auto;
     }
 
     #title {
